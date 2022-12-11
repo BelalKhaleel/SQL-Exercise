@@ -15,3 +15,21 @@ WHERE Points = "300";"
 "UPDATE students
 SET Points = "100"
 WHERE Points = "200";"
+
+"CREATE TABLE graduates (
+ID INTEGER PRIMARY KEY AUTOINCREMENT,
+Name TEXT NOT NULL UNIQUE,
+Age INT,
+Gender TEXT,
+Points INT,
+Graduation TEXT
+);
+"
+"INSERT INTO Graduates (ID, Name, Age, Gender, Points, Graduation)
+SELECT 4, "Layal",  18 ,"F", 350 , 08/09/2018 FROM students 
+WHERE ID = 4;"
+"UPDATE graduates
+SET Graduation = "08/09/2018";"
+"DELETE FROM students
+WHERE ID = 4;"
+
