@@ -1,3 +1,4 @@
+# Basic Queries
 "SELECT name FROM students;"
 "SELECT * 
 FROM students
@@ -15,7 +16,7 @@ WHERE Points = "300";"
 "UPDATE students
 SET Points = "100"
 WHERE Points = "200";"
-
+# Creating Table
 "CREATE TABLE graduates (
 ID INTEGER PRIMARY KEY AUTOINCREMENT,
 Name TEXT NOT NULL UNIQUE,
@@ -32,4 +33,13 @@ WHERE ID = 4;"
 SET Graduation = "08/09/2018";"
 "DELETE FROM students
 WHERE ID = 4;"
-
+# Joins
+"CREATE TABLE dates AS
+SELECT employees.Name, companies.Name, companies.Date
+FROM employees
+JOIN companies
+ON employees.Company = companies.Name;"
+"SELECT name FROM dates
+WHERE date < 2000;"
+"SELECT Name FROM employees
+WHERE Role = 'Graphic Designer';"
