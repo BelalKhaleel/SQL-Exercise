@@ -43,3 +43,15 @@ ON employees.Company = companies.Name;"
 WHERE date < 2000;"
 "SELECT Name FROM employees
 WHERE Role = 'Graphic Designer';"
+# Count & Filter
+"SELECT name FROM students
+WHERE Points = (SELECT max(points) FROM students);"
+"SELECT AVG(Points)
+FROM students;"
+"SELECT COUNT(name)
+FROM students
+WHERE Points = 500;"
+"SELECT name FROM students
+WHERE name like "%s%";"
+"SELECT name FROM students
+ORDER by Points DESC;"
